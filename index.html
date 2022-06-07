@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VmPlayer</title>
+</head>
+<style>
+    .list-group-item {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Vm Player</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" id="search_song" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn" id="search_song_button">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- <h1 style="text-align: center;">Trending Songs</h1>
+    <div class="row" style="margin-bottom: 20px;margin-top:20px;">
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <audio controls="controls" autoplay>
+        <source id="src1" src="https://drive.google.com/file/d/1Dwttrz8rcv_h3r7W7Ts5GUv3caGKmW4Q/view" type="audio/ogg">
+        <source id="src2" src="https://drive.google.com/file/d/1Dwttrz8rcv_h3r7W7Ts5GUv3caGKmW4Q/view"
+            type="audio/mpeg">
+    </audio> -->
+    <div class="card" id="card" style="width: 18rem; margin: auto; display: none;">
+        <!-- <img src="https://filmfare.wwmindia.com/content/2021/may/songsturnedintomovietitles21621349079.jpg"
+            class="card-img-top" alt="..."> -->
+        <div class="card-body">
+            <iframe style="border-radius:12px" id="src1"
+                src="https://open.spotify.com/embed/track/2r1CHpKRDdzHGJScn5UqjX?utm_source=generator" width="100%"
+                height="380" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <h5 class="card-title" id="song_name">Card title</h5>
+            <!-- <div class="btn-group" style="height: 35px;" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">&#9194;</button>
+                <button type="button" class="btn btn-outline-primary">&#9199;</button>
+                <button type="button" class="btn btn-outline-primary">&#9193;</button>
+            </div> -->
+        </div>
+    </div>
+    <ol class="list-group list-group-numbered" id="search_results"
+        style="width: 300px; margin: auto; margin-top: 20px;">
+        <h2>Search Result</h2>
+        <li>
+            <hr class="divider">
+        </li>
+    </ol>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
