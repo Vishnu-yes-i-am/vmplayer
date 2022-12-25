@@ -1,7 +1,7 @@
 document.getElementById("search_song_button").addEventListener("click", () => {
     var text = document.getElementById("search_song").value;
     console.log(text);
-    fetch('https://vmplayer.herokuapp.com/search', {
+    fetch('https://vmplayer-server.vercel.app/search', {
         method: 'POST',
         body: JSON.stringify({
             text: text,
